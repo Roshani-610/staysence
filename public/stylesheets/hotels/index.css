@@ -1,0 +1,264 @@
+/* CSS for Hotels page */
+
+#scroll-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    transition: 0.5s ease-in;
+    color:black;
+    background-color: cadetblue;
+}
+#scroll-to-top:hover{
+  transform: scale(1.1);
+  background-color: darkcyan;
+  color:wheat;
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    text-align: center;
+    position: relative;
+  }
+
+
+.hover-border::after{
+    content: '';
+    width: 0%;
+    height:3px;
+    background: -webkit-linear-gradient(to right, #1CB5E0, #000046);
+    background: linear-gradient(to right, #1CB5E0, #000046); 
+    position: absolute;
+    bottom: 0%;
+    left:50%;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+  }
+  
+.hover-border:hover::after{
+    left:40%;
+    width:20%;
+}
+
+/* .img-fluid{
+    border-top-right-radius:20px;
+    border-top-left-radius:20px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    width:100%;
+    height: 20em;
+  } */
+  
+  .inside{
+    /* margin:0!important; */
+    margin-left: 0;
+    
+  }
+  
+  /* .imageChange{
+    /* height:50%; 
+    width: 100%;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 1s ease;
+    
+  }
+  
+  .imageChange:hover{
+    transform: scale(1.1);
+    transition: transform 0.8s ease-in-out;
+  } */
+  
+#myUl {
+    margin: 0;
+    padding: 20px 30px;
+}
+
+  .row-3{
+    width: 166%;
+    height: 30em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: center;
+  } 
+
+  .hotel-card{
+    width: 25em;
+    height:25em;
+    background-color: rgb(161, 161, 201); 
+    border-radius: 20px;
+    box-shadow:
+    0 6.6px 2.5px rgba(0, 0, 0, 0.059),
+    0 15.7px 5.9px rgba(0, 0, 0, 0.085),
+    0 28px 11.1px rgba(0, 0, 0, 0.105),
+    0 44.9px 19.9px rgba(0, 0, 0, 0.125),
+    0 70.3px 37.2px rgba(0, 0, 0, 0.151),
+    0 138px 89px rgba(0, 0, 0, 0.21);
+    border:1.5px solid rgb(108, 108, 184);
+    padding: 0;
+  }
+  
+  .card-body{
+    width: 25em;
+    height: 15em;
+    margin: 0;
+    transition: transform 0.8s ease-in-out;
+    transform-style: preserve-3d;
+  }
+  
+  .hotel-card .card-body:hover{
+    transform: rotateY(180deg);
+  }
+
+  .card-body figure{
+    background-image: url("data:image/jpeg;base64,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");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 10px;
+    margin:0!important;
+    margin-top:-2em!important;
+    backface-visibility: hidden;
+    /* display: flex;
+    justify-content: center; */
+  }
+  
+  .card-body{
+    margin: 0!important;
+  }
+  
+  .hotel-card{
+    margin: 20px 40px;
+    overflow:hidden;
+  }
+  
+  .card-body .front{
+    /* background-color: blueviolet; */
+  }
+  
+.text-box{
+  color: white;
+  margin-top: 274px;
+  text-align: center;
+}
+
+.text-muted {
+  --bs-text-opacity: 1;
+  color: #ffffff!important;
+}
+
+h3,h5{
+  line-height: 0.2;
+}
+
+.text-box .btn{
+  margin-top: 20px;
+}
+
+  .card-body .back{
+    width: 22em;
+    box-sizing: border-box;
+    transform:rotateY(180deg);
+    max-width: 90%;
+    justify-content:center;
+  }
+
+  /* .card-text .text-muted{
+    color:#35455d!important;
+  } */
+
+  .theme{
+    display: flex;
+    margin-left: 80%;
+    align-items: center;
+  }
+  
+  .changeTheme{
+    margin-right: 1em;
+  }
+  
+  
+  .searchOuter {
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  @media screen and (max-width:985px) {
+    .searchOuter {
+        margin-top: 1rem !important;
+    }
+  }
+  @media screen and (max-width:445px) {
+    .searchOuter {
+        margin-bottom: 3rem !important;
+    }
+    .searchbar:hover > .input-group {
+        width: 60vw !important;
+    }
+  }
+
+  .searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color:#696f6970;
+    border-radius: 30px;
+    padding: 10px;
+    }
+    ::placeholder { 
+      color: purple;
+    }
+
+    .input-group{
+        color: black;
+        border: 0;
+        outline: 0;
+        background: none;
+        width: 7rem;
+        caret-color:transparent;
+        line-height: 40px;
+        transition: width 0.4s linear;
+        }
+        
+        .searchbar:hover > .input-group{
+        padding: 0 10px;
+        width: 30vw;
+        caret-color:red;
+        transition: width 0.4s linear;
+        }
+
+        @media only screen and (max-width: 600px){
+            .hotel-card{
+              width: 20em;
+            height:25em;
+            background-color: rgb(161, 161, 201);
+            border-radius: 20px;
+            box-shadow:
+            0 6.6px 2.5px rgba(0, 0, 0, 0.059),
+            0 15.7px 5.9px rgba(0, 0, 0, 0.085),
+            0 28px 11.1px rgba(0, 0, 0, 0.105),
+            0 44.9px 19.9px rgba(0, 0, 0, 0.125),
+            0 70.3px 37.2px rgba(0, 0, 0, 0.151),
+            0 138px 89px rgba(0, 0, 0, 0.21);
+            border:1.5px solid rgb(108, 108, 184);
+            padding: 0;
+            }
+          
+            .card-body{
+              height: 13em;
+            }
+          
+            .img-fluid{
+              height: 12em;
+            }
+          
+            .card-body .back{
+              left:0;
+            }
+          
+          
+          }

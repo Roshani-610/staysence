@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+  }
+  
+  body{ 
+  background: -webkit-linear-gradient(to right, #ACB6E5, #a8c5c0); 
+  background: linear-gradient(to right, #ACB6E5, #76a199);
+  transition: background 0.2s ease-in;
+  }
+  
+  
+  .nav-link{
+    font-weight:800;
+    color: white!important;
+  }
+  
+  .nav-link:hover{
+    color: #000!important;
+  }
+
+/*Navigation Bar*/
+.navbar {
+    align-items: center;
+    position:relative;
+    top: 0px;
+}
+
+.navbar::before {
+    content: "";
+    background-color: rgb(39, 37, 37);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.navbar a{
+    font-size: 1.3rem;
+    font-family: 'Baloo 2', cursive;
+}
+
+.navbar ul {
+    display: flex;
+    font-family: 'Baloo 2', cursive;
+}
+
+.navbar ul li {
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+.navbar ul li a {
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    color: black;
+    background-color: white;
+}
+
+.navbar-brand {
+    color: red;
+}
+
+
+        

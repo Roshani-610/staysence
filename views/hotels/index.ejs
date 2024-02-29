@@ -1,0 +1,52 @@
+<%- include('../partials/header.ejs') %>
+<link rel="stylesheet" href="/stylesheets/main.css"> 
+<link rel="stylesheet" href="/stylesheets/hotels/index.css">
+
+<h1 class="hover-border">List of all hotels</h1><hr>
+
+<div class="d-flex justify-content-center searchOuter">
+    <div class="searchbar">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="Search Hotel..." aria-label="Username"
+                    aria-describedby="basic-addon1" id="searchInput" onkeyup="searchHotel()">
+            </div>
+    </div>
+</div>
+
+<hr>
+
+<ul id="myUl">
+    <div class="row row-cols-3 g-3">
+            <% for(let hotel of hotels.docs) { %>
+                <div class="hotel-card">
+                    <div class="inside" >
+                        <div class="col-md-4 imageChange ">
+                        <img class="img-fluid" alt="" src="<%= hotel.image %> ">
+                        </div>
+                    </div>
+                    <!-- <div class="hotel-name"><%= hotel.name %></div> -->
+
+                    <div class="card-body ">
+                        <figure class="col-md-8 front">
+                            <div class="text-box">
+                                <h3 class="hotel-name" id="myNames"><%= hotel.name %> </h3>
+                                <br>
+                                <h5 class="card-text">
+                                <small class="text-muted">Price: $ <%= hotel.price %> </small>
+                                </h5>
+                                <a class="btn btn-primary" href="/hotels/<%= hotel._id %>">Read more</a>
+                            </div>
+                        </figure>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    <!-- </div> -->
+</div>
+
+<script src="/scripts/app.js"></script>
+
+
+<%- include('../partials/paginate.ejs') %>
+<%- include('../partials/footer.ejs') %>
